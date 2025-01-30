@@ -17,10 +17,19 @@ public class Calculadora {
                 if (pila.size() < 2) {
                     throw new RuntimeException("Error: Hay menos de dos operandos.");
                 }
-            }
 
+                int b = pila.pop();
+                int a = pila.pop();
+                int resultado = calcular(a, b, caracter);
+                pila.push(resultado);
+            }
         }
 
+        if (pila.size() != 1) {
+            throw new RuntimeException("Error: La expresion es inválida.");
+        }
+
+        return pila.pop();
     }
 
     private int calcular(int a, int b , String operador) {
