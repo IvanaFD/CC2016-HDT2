@@ -32,6 +32,8 @@ public class PilaVector<T> implements Pila<T> {
      * Insertar un elemento en la parte superior de la pila.
      *
      * @param item elemento a agregar
+    * @pre El elemento no debe ser nulo.
+    * @post El elemento se agrega correctamente al final de la pila.
      */
     @Override
     public void push(T item) {
@@ -44,6 +46,8 @@ public class PilaVector<T> implements Pila<T> {
      *
      * @return elemento eliminado de la pila
      * @throws RuntimeException si la pila está vacía
+     * @pre La pila no debe estar vacía.
+    * @post El elemento en la parte superior de la pila se ha eliminado y devuelto.
      */
     @Override
     public T pop() {
@@ -57,6 +61,8 @@ public class PilaVector<T> implements Pila<T> {
      *
      * @return elemento de la parte superior de la pila
      * @throws RuntimeException si la pila está vacía
+     * @pre La pila no debe estar vacía.
+    * @post El elemento en la parte superior de la pila se devuelve sin eliminarlo.
      */
     @Override
     public T peek(){

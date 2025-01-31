@@ -36,6 +36,8 @@ public class Calculadora {
      * @param expresion La expresión matemática en notación postfix.
      * @return El resultado de la evaluación de la expresión.
      * @throws RuntimeException Si la expresión es inválida o contiene menos de dos operandos cuando se requiere.
+     * @pre La expresión debe estar correctamente formada y contener al menos dos operandos cuando sea necesario.
+    * @post El resultado de la expresión es calculado y devuelto como un entero.
      */
     
     public int recorrerPila(String expresion) {
@@ -83,6 +85,8 @@ public class Calculadora {
      * @return El resultado de la operación entre {@code a} y {@code b}.
      * @throws RuntimeException Si el operador no es válido.
      * @throws ArithmeticException Si se intenta dividir entre cero.
+    * @pre El operador debe ser uno de los valores válidos: "+", "-", "*", "/", "%".
+    * @post Se realiza la operación aritmética y se devuelve el resultado.
      */
     private int calcular(int a, int b , String operador) {
         switch (operador) {
