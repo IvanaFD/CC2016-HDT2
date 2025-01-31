@@ -1,3 +1,7 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
 public class Main {
     public static void main(String[] args) {
         Calculadora calc = new Calculadora();
@@ -7,8 +11,8 @@ public class Main {
             String linea;
             while ((linea = br.readLine()) != null) {
                 try {
-                    int resultado = calc.evaluarExpresion(linea);
-                    System.out.println("Expresión: " + linea + " = " + resultado);
+                    // Código sin el método evaluarExpresion
+                    System.out.println("Expresión: " + linea);
                 } catch (RuntimeException e) {
                     System.out.println("Error en la expresión: " + e.getMessage());
                 }
@@ -18,5 +22,3 @@ public class Main {
         }
     }
 }
-
-        
