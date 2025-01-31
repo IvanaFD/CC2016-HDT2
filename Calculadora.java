@@ -9,9 +9,7 @@
  * 
  * 
  * Clase: Calculadora.java
- * Clase principal del programa
- * lee el archivo (datos.txt), lo procesa usando una 
- * pila y realiza la correspondiente operación. 
+ * Evalua expresiones en notacion postfix usando una pila. 
  */
 public class Calculadora {
     private Pila<Integer> pila;
