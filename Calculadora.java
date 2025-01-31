@@ -14,7 +14,8 @@ public class Calculadora {
                 pila.push(Integer.parseInt(caracter));
 
             } else {
-                if (pila.size() < 2) {
+                
+                if (pila.isEmpty() || pila.size() < 2) {
                     throw new RuntimeException("Error: Hay menos de dos operandos.");
                 }
 
@@ -25,8 +26,9 @@ public class Calculadora {
             }
         }
 
-        if (pila.size() != 1) {
-            throw new RuntimeException("Error: La expresion es inválida.");
+        
+        if (pila.isEmpty() || pila.size() != 1) {
+            throw new RuntimeException("Error: La expresión es inválida.");
         }
 
         return pila.pop();
