@@ -26,4 +26,9 @@ public class PilaVector<T> implements Pila<T> {
     public boolean isEmpty() {
         return pila.isEmpty();
     }
+
+    @Override
+    public int size() {
+        return pila.size();
+    }
 }
