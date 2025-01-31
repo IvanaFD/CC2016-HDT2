@@ -1,24 +1,20 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 public class Main {
     public static void main(String[] args) {
-        Calculadora calc = new Calculadora();
         String archivo = "datos.txt";
 
         try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
-            String linea;
-            while ((linea = br.readLine()) != null) {
-                try {
-                    
-                    System.out.println("Expresión: " + linea);
-                } catch (RuntimeException e) {
-                    System.out.println("Error en la expresión: " + e.getMessage());
-                }
-            }
+            String expresion = br.readLine().trim(); 
+
+            Calculadora calc = new Calculadora(new PilaVector<>());
+            int resultado = calc.recorrerPila(expresion); 
+
+            System.out.println("Resultado: " + resultado);
         } catch (IOException e) {
             System.out.println("Error al leer el archivo: " + e.getMessage());
+        } catch (RuntimeException e) {
+            System.out.println(e.getMessage());
         }
     }
 }
