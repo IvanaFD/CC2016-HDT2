@@ -11,7 +11,7 @@ public class Main {
             String linea;
             while ((linea = br.readLine()) != null) {
                 try {
-                    // Código sin el método evaluarExpresion
+                    
                     System.out.println("Expresión: " + linea);
                 } catch (RuntimeException e) {
                     System.out.println("Error en la expresión: " + e.getMessage());
